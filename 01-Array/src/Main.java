@@ -3,6 +3,5 @@ public class Main {
         Array<String> arr = new Array<>();
         arr.addFirst("你好");
         System.out.println(arr);
-
     }
 }

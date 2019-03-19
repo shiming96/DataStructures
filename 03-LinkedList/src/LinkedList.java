@@ -24,6 +24,7 @@ public class LinkedList<E> {
         public String toString() {
             return e.toString();
         }
+
     }
 
     private Node dummyHead;

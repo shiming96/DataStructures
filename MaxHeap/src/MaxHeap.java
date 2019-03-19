@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class MaxHeap<E extends Comparable<E>> {
 
     private Array<E> data;
@@ -57,7 +59,7 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     //元素上浮的过程
-    private void siftUp(int k) {
+    private void  siftUp(int k) {
 
         while( k > 0 && data.get(k).compareTo(data.get(parent(k))) > 0) {
             data.swap(k, parent(k));
@@ -92,8 +94,8 @@ public class MaxHeap<E extends Comparable<E>> {
             if(j + 1 < data.getSize() && data.get(j + 1).compareTo(data.get(j)) > 0) {
                 j = rightChild(k);
             }
-            //data[j]是leftChild 和 rightChild 中的最大值
 
+            //data[j]是leftChild 和 rightChild 中的最大值
             if(data.get(k).compareTo(data.get(j)) >= 0) {
                 break;
             }

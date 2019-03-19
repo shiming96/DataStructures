@@ -1,5 +1,3 @@
-import sun.awt.image.ImageWatched;
-
 public class LinkedListQueue<E> implements Queue<E> {
 
     private class Node {
