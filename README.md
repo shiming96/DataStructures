@@ -1,2 +1,2 @@
 # DataStructures
-DataStructures By Java
+DataStructure Codes By Java
