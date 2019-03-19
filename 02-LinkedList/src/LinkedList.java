@@ -27,6 +27,7 @@ public class LinkedList<E> {
 
     }
 
+    //添加虚拟头节点，统一add操作(主要是头节点时候的操作)
     private Node dummyHead;
     private int size;
 

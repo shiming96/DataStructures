@@ -196,7 +196,7 @@ public class BST<E extends Comparable<E>> {
             node.right = null;  //让删除节点的右链接指向空,因此该节点会被垃圾回收器回收
             size--;
             return rightNode;   //返回待删除节点的右链接
-        }
+        } 
 
         node.left =  removeMin(node.left);   //将删除节点(删除左剩余右)的右子树变为其父节点的左子树。
         return node;
