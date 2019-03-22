@@ -41,8 +41,7 @@ public class BSTMap<K extends Comparable<K>, V> implements Map<K, V>  {
 
         if(key.compareTo(node.key) < 0) {
             node.left = add(node.left, key, value);
-        }
-        else if(key.compareTo(node.key) > 0) {
+        } else if(key.compareTo(node.key) > 0) {
             node.right = add(node.right, key, value );
         } else {
             node.value = value;
@@ -52,17 +51,15 @@ public class BSTMap<K extends Comparable<K>, V> implements Map<K, V>  {
 
     //返回以node为根节点的二分搜索树中，key所在节点
     private Node getNode(Node node, K key) {
-        if(node == null) {
+        if(node == null)
             return null;
-        }
-        if(key.compareTo(node.key) == 0) {
+        
+        if(key.compareTo(node.key) == 0)
             return node;
-        }
-        else if(key.compareTo(node.key) < 0) {
+        if(key.compareTo(node.key) < 0)
             return getNode(node.left, key);
-        } else {
+        if(key.compareTo(node.key) > 0)
             return getNode(node.right, key);
-        }
     }
 
     //返回以node为根的二分搜索树的最小值所在节点
@@ -97,7 +94,6 @@ public class BSTMap<K extends Comparable<K>, V> implements Map<K, V>  {
             return node.value;
         }
         return null;
-
     }
 
     //删除掉以node为根的二分搜索树中键为Key的节点, 递归算法
