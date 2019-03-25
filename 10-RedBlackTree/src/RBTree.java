@@ -16,15 +16,13 @@ public class RBTree<K extends Comparable<K>, V> {
             this.value = value;
             left = null;
             right = null;
-            color = RED;
+            color = RED;//每次添加的节点总是要跟别人融合，因此为红
         }
     }
 
     private Node root;
     private int size;
 
-    public RBTree(){
-        root = null;
         size = 0;
     }
 
@@ -37,6 +35,7 @@ public class RBTree<K extends Comparable<K>, V> {
     }
 
     private boolean isRed(Node node) {
+        //最后的空节点定义为黑色
         if(node == null)
             return BLACK;
         return node.color;
