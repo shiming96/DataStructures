@@ -1,7 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
-
 class Solution {
     public int maxDepth(TreeNode root) {
         if(root == null) {
@@ -9,7 +5,7 @@ class Solution {
         }
         int leftDepth = maxDepth(root.left);
         int rightDepth = maxDepth(root.right);
-        return java.lang.Math.max(leftDepth,rightDepth) + 1;
+        return Math.max(leftDepth,rightDepth) + 1;
     }
 
 }
