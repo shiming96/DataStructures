@@ -23,6 +23,8 @@ public class RBTree<K extends Comparable<K>, V> {
     private Node root;
     private int size;
 
+    public RBTree(){
+        root = null;
         size = 0;
     }
 
@@ -120,7 +122,7 @@ public class RBTree<K extends Comparable<K>, V> {
         if(isRed(node.left) && isRed(node.right))
             flipColor(node);
 
-        return node;
+        return node; 
     }
 
     // 返回以node为根节点的二分搜索树中，key所在的节点
